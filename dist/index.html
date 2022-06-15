@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Working with FireBase</title>
+  </head>
+  <body>
+    <main>
+      <nav class="nav"></nav>
+      <!-- users -->
+      <section class="users">
+        <h1 class="heading">Working with firebase</h1>
+        <div class="container">
+          <h1 class="subHead">Users</h1>
+          <div id="body" class="body"></div>
+          <button class="btn" id="usersRefreshBtn">Refresh</button>
+        </div>
+      </section>
+      <!-- create -->
+      <section class="create">
+        <h1 class="subHead">Create User</h1>
+        <div class="body">
+          <form id="createUserForm">
+            <div class="formControl">
+              <label for="name">First Name</label>
+              <input required type="text" name="name" id="name" />
+            </div>
+            <div class="formControl">
+              <label for="surname">Sur Name</label>
+              <input required type="text" name="surname" id="surname" />
+            </div>
+            <div class="formControl">
+              <label for="email">Email</label>
+              <input required type="email" name="email" id="email" />
+            </div>
+            <div class="formControl">
+              <label for="age">Age </label>
+              <input required type="number" name="age" id="age" />
+            </div>
+            <div class="formControl">
+              <label for="phone">Phone </label>
+              <input required type="number" name="phone" id="phone" />
+            </div>
+            <div class="formControl">
+              <label for="bio">Bio</label>
+              <div id="bio" contenteditable="true" class="textarea"></div>
+            </div>
+            <button class="btn" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+      <section class="view">
+        <h1 class="subHead">View single user</h1>
+        <div class="body">
+          <form id="viewUserForm">
+            <div class="formControl">
+              <label for="viewEmail">User Email</label>
+              <input
+                required
+                placeholder="Enter user email Id"
+                type="email"
+                name="email"
+                id="viewEmail"
+              />
+            </div>
+            <button type="submit" class="btn">View user</button>
+          </form>
+          <div id="singleUserCon">
+            <!-- javascript injects here -->
+          </div>
+        </div>
+      </section>
+      <!-- update -->
+      <section class="update">
+        <h1 class="subHead">Update a User</h1>
+        <div class="body">
+          <form id="updateUserForm">
+            <div class="formControl">
+              <label for="updateEmail">Email Id</label>
+              <input
+                placeholder="enter user email id"
+                type="text"
+                name="email"
+                id="updateEmail"
+                required
+              />
+            </div>
+            <div class="formControl">
+              <label for="fields">Select Field</label>
+              <select required name="fields" id="fields">
+                <option disabled selected value="">Select an item</option>
+                <option value="name">First Name</option>
+                <option value="surname">Sur Name</option>
+                <option value="age">Age</option>
+                <option value="phone">Phone</option>
+                <option value="bio">Bio</option>
+              </select>
+            </div>
+            <div class="formControl">
+              <label for="value">Value</label>
+              <input
+                required
+                placeholder="enter value to be updated"
+                type="text"
+                name="value"
+                id="value"
+              />
+            </div>
+            <button class="btn" type="submit">Update user</button>
+          </form>
+        </div>
+      </section>
+      <!-- delete -->
+      <section class="delete">
+        <h1 class="subHead">Delete a User</h1>
+        <form id="deleteUserForm">
+          <div class="formControl">
+            <label for="deleteEmail"> Enter Email </label>
+            <input
+              placeholder="Enter User Email"
+              type="email"
+              name="deleteEmail"
+              id="deleteEmail"
+              required
+            />
+          </div>
+          <button class="btn" type="submit">Delete User</button>
+        </form>
+      </section>
+    </main>
+    <script src="javascript.js"></script>
+  </body>
+</html>

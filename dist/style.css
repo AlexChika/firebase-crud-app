@@ -1,0 +1,173 @@
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.falign {
+  display: flex;
+  align-items: center;
+}
+.btn {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.formControl {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.formControl label {
+  width: 30%;
+  padding: 10px;
+  background-color: antiquewhite;
+  height: max-content;
+}
+.formControl input,
+.formControl select {
+  width: 65%;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+.formControl .textarea {
+  width: 65%;
+  background-color: white;
+}
+form button {
+  display: block;
+  width: 90%;
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: tomato !important;
+  text-align: center;
+}
+/*  */
+body {
+  background-color: antiquewhite;
+}
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "users users"
+    "create view"
+    "update delete";
+}
+section {
+  border-bottom: 6px solid white;
+  padding: 20px 10px;
+}
+.heading {
+  text-align: center;
+  color: teal;
+  font-size: 4rem;
+}
+main .subHead {
+  color: white;
+  text-align: center;
+  margin: 20px 0px;
+}
+/* users styling */
+main .users {
+  grid-area: users;
+}
+main .users .container {
+  background-color: tomato;
+  padding-bottom: 10px;
+}
+main .users .body {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .users button {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  border: 2px solid white;
+  background-color: antiquewhite;
+}
+main .users .body article {
+  width: 250px;
+  padding: 10px;
+  margin: 10px 10px;
+  background-color: thistle;
+}
+main .users .body article .identifiers {
+  opacity: 0.7;
+}
+main .users .body article .email {
+  word-wrap: break-word;
+}
+/* create styling  */
+main .create {
+  grid-area: create;
+  background-color: teal;
+}
+/* view styling */
+main .view {
+  grid-area: view;
+  background-color: cyan;
+}
+main .view .singleUser {
+  display: flex;
+  padding-right: 10px;
+  padding-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+main .view .singleUser .imgCon {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+}
+main .view .singleUser .imgCon img {
+  width: 100%;
+  height: 100%;
+}
+main .view .singleUser .userDetail {
+  text-align: center;
+}
+/* update styling */
+main .update {
+  grid-area: update;
+  background-color: skyblue;
+}
+/* delete styling */
+main .delete {
+  grid-area: delete;
+  background-color: pink;
+}
+@media screen and (max-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "users users"
+      "create create"
+      "view view"
+      "update update"
+      "delete delete";
+  }
+}
+@media screen and (max-width: 500px) {
+  .heading {
+    text-align: center;
+    color: teal;
+    font-size: 2.5rem;
+  }
+
+  main .users .body article {
+    width: 150px;
+  }
+}
