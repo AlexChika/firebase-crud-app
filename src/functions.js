@@ -5,6 +5,7 @@ import {
   updateDoc,
   getDoc,
   getDocs,
+  onSnapshot,
 } from "firebase/firestore";
 
 // Getting all users from firebase
@@ -41,6 +42,7 @@ const getUser = (email) => {
   const docref = docRef(email);
   return getDoc(docref);
 };
+//  Real Time Data Collection
 //  getting Dom elements
 function dom(selector) {
   const element = document.querySelector(selector);

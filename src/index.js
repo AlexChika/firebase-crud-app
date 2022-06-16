@@ -24,8 +24,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 // refresh users in case of new changes
 usersRefreshBtn.addEventListener("click", async () => {
+  usersRefreshBtn.textContent = "Please wait";
   const users = await getAllUsers();
   usersDomElement.innerHTML = usersRender(users);
+  usersRefreshBtn.textContent = "Refresh";
 });
 // creates user or updates existing user
 createUserForm.addEventListener("submit", async (e) => {
