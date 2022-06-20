@@ -5,7 +5,6 @@ import {
   updateDoc,
   getDoc,
   getDocs,
-  onSnapshot,
 } from "firebase/firestore";
 
 // Getting all users from firebase

@@ -171,3 +171,15 @@ main .delete {
     width: 150px;
   }
 }
+/* ....... */
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 2px solid red;
+}
+.app button{
+  border:2px solid red;
+  padding: 10px 20px;
+  
+}
